@@ -16,7 +16,7 @@ def grad_f(x):
     grad_x2 = sp.diff(f([x1, x2]), x2).subs({x1: x1_val, x2: x2_val})
     return np.array([grad_x1, grad_x2]).astype(float)
 
-def steepest_descent(f, grad_f, x0, tol=1e-6, max_iter=1):
+def steepest_descent(f, grad_f, x0, tol=1e-6, max_iter=1000):
     x = np.array(x0)
     for i in range(max_iter):
         grad = grad_f(x)
