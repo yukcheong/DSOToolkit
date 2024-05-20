@@ -21,8 +21,3 @@ x0 = np.array([0, 0])
 # Perform optimization using conjugate gradients
 result = minimize(f, x0, method='Newton-CG', jac=grad_f, options={'disp': True, 'maxiter': 2})
 
-# Get the value of the function after the second iteration
-value_after_iteration = result.fun
-
-# Print the result
-print("Value of the function after the x iteration:", round(value_after_iteration, 3))
