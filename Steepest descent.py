@@ -7,7 +7,7 @@ x2 = sp.Symbol('x2')
 
 # Define the objective function
 def f(x):
-    return 1*x[0] - 2*x[1] + x[0]*x[1] + x[0]**2 + x[1]**2
+    return 2*x[0] -1*x[1] + x[0]*x[1] + x[0]**2 + x[1]**2
 
 # Define the gradient of the objective function
 def grad_f(x):
@@ -16,7 +16,7 @@ def grad_f(x):
     grad_x2 = sp.diff(f([x1, x2]), x2).subs({x1: x1_val, x2: x2_val})
     return np.array([grad_x1, grad_x2]).astype(float)
 
-def steepest_descent(f, grad_f, x0, tol=1e-6, max_iter=1000):
+def steepest_descent(f, grad_f, x0, tol=1e-6, max_iter=1):
     x = np.array(x0)
     for i in range(max_iter):
         grad = grad_f(x)
@@ -30,7 +30,7 @@ def steepest_descent(f, grad_f, x0, tol=1e-6, max_iter=1000):
     return x
 
 # Initial point
-x0 = [0.70, -0.61]
+x0 = [-0.76, 0.91]
 
 # Run steepest descent algorithm
 solution = steepest_descent(f, grad_f, x0)
