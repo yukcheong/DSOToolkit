@@ -2,7 +2,7 @@ import sympy as sp
 
 # Define the variable and function
 x = sp.symbols('x')
-f = 0.66*x**3 + 6.16*x**2 + 1.5*x + 2.73
+f = 0.57*x**3 + 4.97*x**2 + 1.79*x + 1.67
 
 # Compute the first and second derivatives
 f_prime = sp.diff(f, x)

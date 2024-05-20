@@ -3,10 +3,10 @@ from deap import algorithms, base, creator, tools
 
 # Define the objectives
 def f1(x):
-    return 2 * x**3 - 2 * x - 1
+    return 1 * x**3 - 4 * x - 6
 
 def f2(x):
-    return 2 * x**2 + 3 * x + 8
+    return 1 * x**2 -2 * x + 1
 
 # Define the problem
 creator.create("FitnessMin", base.Fitness, weights=(-1.0, -1.0))
