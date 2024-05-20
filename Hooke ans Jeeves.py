@@ -134,6 +134,6 @@ def f(x):
     return 1*x1 - 2*x2 + x1*x2 + x1**2 + x2**2
 
 start = [-1.2,1.0]
-res = hooke(f, start, itermax=200000)
+res = hooke(f, start,rho=0.1, itermax=2)
 print("Optimal solution:", res["x"])
 print("f(x):", res["fun"])
