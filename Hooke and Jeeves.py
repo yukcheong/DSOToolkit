@@ -131,9 +131,9 @@ def hooke(f, startpt, rho=0.5, epsilon=1E-6, itermax=5000, args=[]):
 
 def f(x):
     [x1,x2] = x
-    return 1*x1 - 2*x2 + x1*x2 + x1**2 + x2**2
+    return 1*x1 - x2**2 + 2*x1*x2**2 + x2**3
 
-start = [-1.2,1.0]
+start = [0,1.0]
 res = hooke(f, start,rho=0.1, itermax=2)
 print("Optimal solution:", res["x"])
 print("f(x):", res["fun"])
