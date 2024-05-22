@@ -57,7 +57,7 @@ print(f"Optimal x: {optimal_x}")
 print(f"Combined({optimal_x}) = {optimal_combined}")
 print(f"f1({optimal_x}) = {optimal_f1}")
 print(f"f2({optimal_x}) = {optimal_f2}")
-
+print("\n")
 print(f"Worst x: {worst_x}")
 print(f"Combined({optimal_x}) = {worst_combined}")
 print(f"f1({worst_x}) = {worst_f1}")
