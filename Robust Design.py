@@ -16,8 +16,8 @@ def mean_performance_index_to_minimize(x, noise):
     # Since minimize works with arrays, we need to handle the input accordingly
     return mean_performance_index(x[0], noise)
 
-noise = 0.75
-lower_bound = 0.8
+noise = 0.5
+lower_bound = 0.75
 upper_bound = 2
 #initial_guess = [1.0]  # Initial guess for the optimizer
 
