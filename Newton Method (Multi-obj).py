@@ -17,7 +17,7 @@ def newton_method_multi_dim(f, grad_f, hess_f, x0, tol=1e-6, max_iter=100):
     np.array: Estimated position of the local minimum.
     """
     x = x0
-    for i in range(max_iter):
+    for i in range(max_iter+1):
         grad = grad_f(x)
         hess = hess_f(x)
         
