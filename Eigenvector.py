@@ -16,12 +16,12 @@ def compute_priority_vector(matrix):
     # Normalize the eigenvector
     priority_vector = priority_vector / np.sum(priority_vector)
     # Return the real part of the priority vector (in case of complex numbers)
-    return np.real(priority_vector)
+    return np.real(priority_vector), eigenvalues
 
 # Define the relative importance
 # p13 = p12 * p23
-p12 = 2.83
-p23 = 3.73
+p12 = 3.15
+p23 = 3.26
 p13 = p12 * p23
 
 # Construct the preference matrix
@@ -32,7 +32,8 @@ preference_matrix = np.array([
 ])
 
 # Compute the priority vector
-weight_vector = compute_priority_vector(preference_matrix)
+weight_vector = compute_priority_vector(preference_matrix)[0]
+eigen_values = compute_priority_vector(preference_matrix)[1]
 
 # Print the priority vector
 print("Weight Vector:", weight_vector)
