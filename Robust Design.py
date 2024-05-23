@@ -30,6 +30,7 @@ optimal_x_mean_curve = result_mean_curve.x[0]
 minimum_x_based_on_mean = f(optimal_x_mean_curve)
 penalty_mean = np.abs(mean_performance_index(optimal_x_mean_curve, noise)-f(optimal_x_nominal_design))/f(optimal_x_nominal_design)
 
+uncertainty_in_fx = 1-result_nominal_design.fun/minimum_x_based_on_mean
 
 
 print(f"Optimal x for f(x): {optimal_x_nominal_design}")
@@ -40,3 +41,5 @@ print(f"Optimal x for E[f(x)]: {optimal_x_mean_curve}")
 print(f"f(x) based on optimal x for mean: {minimum_x_based_on_mean}")
 print(f"Minimum E[f(x)]: {result_mean_curve.fun}")
 print(f"Penalty for noise adjusted optimisation: {penalty_mean}")
+print("------------------------------------------------")
+print(f"Uncertainty in f(x): {uncertainty_in_fx}")
