@@ -6,10 +6,10 @@ import numpy as np
 alpha = sp.symbols('alpha')
 
 # Define the lift coefficient C_L
-C_L = 0.088 * (alpha + 1)
+C_L = 0.09 * (alpha + 2)
 
 # Define the drag coefficient C_D
-C_D = 0.028 + 0.069 * C_L**2
+C_D = 0.02 + 0.055 * C_L**2
 
 # Define the lift-to-drag ratio
 L_D_ratio = C_L / C_D
