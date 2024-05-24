@@ -13,10 +13,10 @@ coefficients = np.polyfit(x, y, 1)
 
 # Define the functions f1 and f2
 def f1(x):
-    return 1 / x
+    return 1.110 / x
 
 def f2(x):
-    return x ** 2
+    return 0.751*x ** 2
 
 # Define the membership function
 def membership(f):
@@ -59,7 +59,7 @@ print(f"f1({optimal_x}) = {optimal_f1}")
 print(f"f2({optimal_x}) = {optimal_f2}")
 print("\n")
 print(f"Worst x: {worst_x}")
-print(f"Combined({optimal_x}) = {worst_combined}")
+print(f"Combined({worst_x}) = {worst_combined}")
 print(f"f1({worst_x}) = {worst_f1}")
 print(f"f2({worst_x}) = {worst_f2}")
 
@@ -77,4 +77,5 @@ plt.legend(loc='center left', bbox_to_anchor=(1, 0.5))
 plt.title('Membership Functions and Combined Membership')
 plt.show()
 '''
+
 
