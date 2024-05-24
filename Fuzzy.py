@@ -13,10 +13,10 @@ coefficients = np.polyfit(x, y, 1)
 
 # Define the functions f1 and f2
 def f1(x):
-    return 1.110 / x
+    return 1.014 / x
 
 def f2(x):
-    return 0.751*x ** 2
+    return 0.784*x ** 2
 
 # Define the membership function
 def membership(f):

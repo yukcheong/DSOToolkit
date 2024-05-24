@@ -7,7 +7,7 @@ x1, x2 = sp.symbols('x1 x2')
 
 # Define the function using sympy
 def f(x):
-    return x[0] - x[1] + (1.3) * x[0] * x[1] + 2 * x[0]**2 + x[1]**2
+    return x[0] - x[1] + (-1.6) * x[0] * x[1] + 2 * x[0]**2 + 1*x[1]**2
 
 # Define the gradient of the function using sympy
 def grad_f(x):

@@ -2,7 +2,7 @@ import sympy as sp
 
 # Define the variable and function
 x = sp.symbols('x')
-f = 0.57*x**3 + 4.97*x**2 + 1.79*x + 1.67
+f = 0.96*x**4-4*x**3+2.19
 
 # Compute the first and second derivatives
 f_prime = sp.diff(f, x)
@@ -13,7 +13,7 @@ f_prime_func = sp.lambdify(x, f_prime, 'numpy')
 f_double_prime_func = sp.lambdify(x, f_double_prime, 'numpy')
 
 # Newton's method implementation
-def newton_method(f_prime, f_double_prime, x0, tolerance=1e-10, max_iterations=1000):
+def newton_method(f_prime, f_double_prime, x0, tolerance=1e-10, max_iterations=2):
     x = x0
     for i in range(max_iterations):
         f_prime_x = f_prime(x)
@@ -29,7 +29,7 @@ def newton_method(f_prime, f_double_prime, x0, tolerance=1e-10, max_iterations=1
     return None
 
 # Initial guess
-x0 = 0  # A reasonable initial guess (can be adjusted if necessary)
+x0 = 1.84  # A reasonable initial guess (can be adjusted if necessary)
 
 # Find the minimum
 minimum_x = newton_method(f_prime_func, f_double_prime_func, x0)

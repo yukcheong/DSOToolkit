@@ -39,7 +39,7 @@ def newton_method_multi_dim(f, grad_f, hess_f, x0, tol=1e-6, max_iter=100):
 
 # Define the variables and function using SymPy
 x1, x2 = sp.symbols('x1 x2')
-f_sym = x1**2 + 2*x2**2 + 2*x1*x2 + 2*x1 + x2
+f_sym = x1-2*x2+1.6*x1*x2+x1**2+x2**2
 
 # Compute the gradient and Hessian using SymPy
 grad_f_sym = [sp.diff(f_sym, var) for var in (x1, x2)]
@@ -62,3 +62,5 @@ x0 = np.array([0.0, 0.0])
 # Run Newton's method
 minimum = newton_method_multi_dim(lambda x: f_sym.subs({x1: x[0], x2: x[1]}), example_grad_f, example_hess_f, x0)
 print("The minimum is at:", minimum)
+ans  = f_sym.subs({x1: minimum[0], x2: minimum[1]})
+print(ans)

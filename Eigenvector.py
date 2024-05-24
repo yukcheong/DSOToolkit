@@ -20,8 +20,8 @@ def compute_priority_vector(matrix):
 
 # Define the relative importance
 # p13 = p12 * p23
-p12 = 2.8
-p23 = 4.36
+p12 = 1.2
+p23 = 2.25
 p13 = p12 * p23
 
 # Construct the preference matrix

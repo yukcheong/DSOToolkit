@@ -3,7 +3,7 @@ from scipy.integrate import quad
 from scipy.optimize import differential_evolution
 
 def f(x):
-    return x + 1.82 / x
+    return x + 1.66 / x
 
 def mean_performance_index(x, noise):
     lower_bound = x - noise
@@ -16,7 +16,7 @@ def mean_performance_index_to_minimize(x, noise):
     # Since minimize works with arrays, we need to handle the input accordingly
     return mean_performance_index(x[0], noise)
 
-noise = 0.73
+noise = 0.64
 lower_bound = 0.8
 upper_bound = 2
 #initial_guess = [1.0]  # Initial guess for the optimizer

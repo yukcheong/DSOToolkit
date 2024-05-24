@@ -1,5 +1,5 @@
 def f(x):
-    return x**5 - 2*x**3 - 10*x + 5
+    return -1*(0.74*x**4-5.78*x**3+2.98)
 
 def inverse_parabolic_interpolation(f, x1, x2, x3):
     f1, f2, f3 = f(x1), f(x2), f(x3)
@@ -29,7 +29,7 @@ def minimize_using_inverse_parabolic_interpolation(f, x1, x2, x3, iterations):
     
     return x_new
 
-x1, x2, x3 = 0, 1, 2
-iterations = 2
+x1, x2, x3 = 0.26, 1.22, 2.66
+iterations = 1
 x_min = minimize_using_inverse_parabolic_interpolation(f, x1, x2, x3, iterations)
 print(f"Minimum found: x = {x_min}, f(x) = {f(x_min)}")
